@@ -1,0 +1,63 @@
+@font-face {
+    font-family: Roboto;
+    src: url(..//../fonts/Roboto-Regular.ttf);
+}
+
+body {
+
+    background-color: #58678B;
+}
+
+.p-div p {
+    font-family: Roboto;
+    font-size: 45px;
+    font-weight: 300;
+    line-height: 53px;
+    letter-spacing: -1.7335766553878784px;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    width: 100%;
+    height: 354.21px;
+}
+
+.Title1 {
+    font-family: Roboto;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 31px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #43484D;
+}
+
+.desc1 {
+    color: #86939E;
+}
+
+#priceDesc1 {
+    color: #86939E;
+}
+
+#price1 {
+    font-family: Roboto;
+    font-size: 43px;
+    font-weight: 300;
+    line-height: 48px;
+    letter-spacing: -1.64749014377594px;
+    text-align: center;
+    color: #7DC855;
+}
+
+.btn1 {
+    width: 247.12px;
+    height: 49.42px;
+    background-color: rgb(69, 240, 69);
+    border: none;
+    color: white;
+    border-radius: 10px;
+}

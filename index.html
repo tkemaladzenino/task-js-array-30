@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html Lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-array-30</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+<body style="background: linear-gradient(297.24deg, #E8EFFC 8.25%, #FFFFFF 91.76%);">
+
+    <div class="container">
+        <div class="row pb-5">
+            <div class="col-12 p-div d-flex justify-content-center" style="padding-top: 150px;">
+                <p>Choose Your License</p>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-4 d-flex ">
+
+                <div class="box d-flex flex-column align-items-center">
+                    <div class="title1-div  d-flex flex-column gap-3 pt-5" id="tag-1">
+                        <span class="Title1" id="title1"></span>
+                        <span class="desc1" id="aaa"></span>
+                    </div>
+                    <div class="line"></div>
+                    <div class="price1-div d-flex flex-row pt-2 gap-4 pb-3">
+                        <span id="price1"></span>
+                        <span id="priceDesc1"> </span>
+                    </div>
+                    <button class="btn1" id="btn-1">Get it </button>
+                </div>
+
+            </div>
+            <div class="col-4">
+                <div class="box" id="bbb">
+                    <div class="title1-div  d-flex flex-column gap-3 pt-5" id="tag-2">
+                        <span class="Title2" id="title2"></span>
+                        <span class="desc2" id="bbb"></span>
+                    </div>
+                    <div class="line"></div>
+                    <div class="price1-div d-flex flex-row pt-2 gap-4 pb-3">
+                        <span class="pr-2" id="price2"></span>
+                        <span id="priceDesc2"> </span>
+                    </div>
+                    <button class="btn1" id="btn-1">Get it </button>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="box" id="ccc">
+
+                    <div class="title1-div  d-flex flex-column gap-3 pt-5" id="tag-3">
+                        <span class="Title2" id="title2"></span>
+                        <span class="desc2" id="bbb"></span>
+                    </div>
+                    <div class="line"></div>
+                    <div class="price1-div d-flex flex-row pt-2 gap-4 pb-3">
+                        <span class="pr-2" id="price2"></span>
+                        <span id="priceDesc2"> </span>
+                    </div>
+                    <button class="btn1" id="btn-1">Get it </button>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tag-1"></div>
+    <div id="tag-2"></div>
+    <div id="tag-3"></div>
+    <script>
+
+
+
+
+        const myArray = [
+            { id: 1, Title: "Personal", Description: "Just started using awesome Module.<br> Great way to boost the hard designing or <br> prototyping process.", name: 'Object 1', price: "Free", priceDescription: "Per month billed annualy <br> or $250 from month to <br>  month" },
+            { id: 2, Title: "Agency", Description: "Also a perfect tool for creative studios and freelancers", price: 123, priceDescription: "Per month billed annualy or €250 from month to month" },
+            { id: 3, Title: "Unlimited", Description: "Living in today’s metropolitan world of cellular phones, mobile computers", price: 232, priceDescription: "Per month billed annualy or €250 from month to month" }
+        ];
+
+        // Loop through the array and insert objects into respective tags
+        myArray.forEach(object => {
+            const tagId = `tag-${object.id}`;
+            const tagTitle = `<p>${object.Title}</p>`;
+            const tagDescription = `<p>${object.Description}</p>`;
+            const tagprice = `<p>${object.price}</p>`;
+            const tagpriceD = `<p>${object.priceDescription}</p>`;
+
+            // Insert the object into the respective tag using innerHTML
+            document.getElementById(tagId).innerHTML += tagTitle;
+            document.getElementById(tagId).innerHTML += tagDescription;
+            document.getElementById(tagId).innerHTML += tagprice;
+            document.getElementById(tagId).innerHTML += tagpriceD;
+        });
+
+
+    </script>
+</body>
+
+</html>
