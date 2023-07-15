@@ -19,17 +19,16 @@
 <body style="background: linear-gradient(297.24deg, #E8EFFC 8.25%, #FFFFFF 91.76%);">
 
     <div class="container">
-        <div class="row pb-5">
+        <div class="row pb-1">
             <div class="col-12 p-div d-flex justify-content-center" style="padding-top: 140px;">
                 <p style="color: #43484D;">Choose Your License</p>
             </div>
         </div>
-        <div class="row d-flex">
-            <div class="col-4 position-relative">
-                <div class="div-hr position-absolute" style="top: 160px; width: 96%;">
+        <div class="row d-flex p-5">
+            <div class="col-4 a-1 position-relative">
+                <div class="div-hr position-absolute" style="top: 210px; width: 96%;">
                     <hr>
                 </div>
-
                 <div class="box d-flex flex-column align-items-center height: auto;">
                     <div class="div-1" id="tag-1">
                     </div>
@@ -43,7 +42,7 @@
                     <div class="img-div" style="position: absolute; right: 0; top: 0;">
                         <img src="./images/Icon.png">
                     </div>
-                    <div class="div-hr position-absolute" style="top: 160px; width: 100%;">
+                    <div class="div-hr position-absolute" style="top: 210px; width: 100%;">
                         <hr>
                     </div>
                     <div class="div-1" id="tag-2">
@@ -54,7 +53,7 @@
                 </div>
             </div>
             <div class="col-4 position-relative">
-                <div class="div-hr position-absolute" style="top: 160px; width: 95%;">
+                <div class="div-hr position-absolute" style="top: 210px; width: 95%;">
                     <hr>
                 </div>
                 <div class="box d-flex flex-column align-items-center">
@@ -91,13 +90,11 @@
             // Create the content for the tag using the object's properties
             const tagContent = `
     <p style="color: #43484D; font-size: 26px; padding-bottom: 10px;" >${object.Title}</p>
-    <p style="color:  #86939E; font-size: 16px; padding-bottom: 20px;">${object.Description}</p>
+    <p style="color:  #86939E; font-size: 16px; padding-bottom: 30px;">${object.Description}</p>
 
-
-    <div style="display: flex; gap: 10px;">
-        <p> &#8364 </p>
-        
-        <p style="color: #43484D;font-size: 42px;" >${object.price}</p >
+    <div style="display: flex; gap: 10px; padding-top: 50px;">
+        <p style="padding-top: 0px;"> &#8364 </p>
+         <p style="font-size: 42px;" >${object.price}</p >
              
       <p style="color:  #86939E; font-size: 16px;">${object.priceDescription}</p></span>
     </div>
@@ -105,6 +102,8 @@
             // Insert the content into the respective tag using innerHTML
             document.getElementById(tagId).innerHTML = tagContent;
 
+            var hr = document.createElement("div-hr");
+            hr.classList.add("dir");
         });
 
 
